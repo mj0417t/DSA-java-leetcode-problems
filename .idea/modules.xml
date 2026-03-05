@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BS/BS.iml" filepath="$PROJECT_DIR$/BS/BS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Binary Search/BS.iml" filepath="$PROJECT_DIR$/Binary Search/BS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Binary Search.iml" filepath="$PROJECT_DIR$/.idea/Binary Search.iml" />
     </modules>
   </component>
