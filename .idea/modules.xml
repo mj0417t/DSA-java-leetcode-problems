@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Binary Search/BS.iml" filepath="$PROJECT_DIR$/Binary Search/BS.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/Binary Search.iml" filepath="$PROJECT_DIR$/.idea/Binary Search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Data Structure And Algorithm.iml" filepath="$PROJECT_DIR$/.idea/Data Structure And Algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList-DoublyLL/LinkedList-DoublyLL.iml" filepath="$PROJECT_DIR$/LinkedList-DoublyLL/LinkedList-DoublyLL.iml" />
     </modules>
   </component>
 </project>

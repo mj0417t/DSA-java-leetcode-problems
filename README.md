@@ -1,2 +1,2 @@
-Problems related to Binary Search
+Solving Leetcode problems in Java
 <br> Author - Musarrat Jahan
