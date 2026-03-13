@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/Binary Search/BS.iml" filepath="$PROJECT_DIR$/Binary Search/BS.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Data Structure And Algorithm.iml" filepath="$PROJECT_DIR$/.idea/Data Structure And Algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList-DoublyLL/LinkedList-DoublyLL.iml" filepath="$PROJECT_DIR$/LinkedList-DoublyLL/LinkedList-DoublyLL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList-Leetcode/LinkedList-Leetcode.iml" filepath="$PROJECT_DIR$/LinkedList-Leetcode/LinkedList-Leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Recursion-Leetcode/Recursion-Leetcode.iml" filepath="$PROJECT_DIR$/Recursion-Leetcode/Recursion-Leetcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Recursion-Rev/Recursion-Rev.iml" filepath="$PROJECT_DIR$/Recursion-Rev/Recursion-Rev.iml" />
     </modules>
   </component>
 </project>
