@@ -1,55 +1,59 @@
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.Stack;
 
 public class SubArrMinMumsSum {
+
     public static void main(String[] args) {
-        int[] arr = {1,4,6,7,3,7,8,1};
+//        int[] arr = {3,1,2,4};
+        int[] arr = {71,55,82,55};
 //        System.out.println(sumSubarrayMins(arr)); //TLE for large size array / values
         System.out.println(sumSubarrayMinsOpt(arr));
     }
 
     private static int sumSubarrayMinsOpt(int[] arr) {
-        HashMap<Integer,Integer> map=new HashMap<>();
+        int MOD=(int)(1e9+7);
+        int[]nseIndex=nextSmallElement(arr);
+        int[]pseIndex=prevSmallElement(arr);
+
+        int total=0;
+
         for (int i = 0; i < arr.length; i++) {
-            map.put(arr[i],i);
+            long subArrs=(long) (i-pseIndex[i])*(nseIndex[i]-i);
+            long contribution=(arr[i]*subArrs)%MOD;
+            total=(int)((total+contribution)%MOD);
         }
-        int[]nseIndex=nextSmallElement(map,arr);
-        int[]pseIndex=prevSmallElement(map,arr);
-        System.out.println(Arrays.toString(nseIndex));
-        System.out.println(Arrays.toString(pseIndex));
-        return 0;
+
+        return total;
     }
 
-    private static int[] prevSmallElement(HashMap<Integer, Integer> map, int[] arr) {
+    private static int[] prevSmallElement(int[] arr) {
         int[] pseInd= new int[arr.length];
         Stack<Integer> st = new Stack<>();
         for(int i=0;i<arr.length;i++){
-            while (!st.isEmpty() && st.peek()>=arr[i])
+            while (!st.isEmpty() && arr[st.peek()]>arr[i])
                 st.pop();
             if(st.isEmpty())
                 pseInd[i]=-1;
             else
-                pseInd[i]=map.get(st.peek());
+                pseInd[i]=st.peek();
 
-            st.push(arr[i]);
+            st.push(i);
         }
         return pseInd;
     }
 
-    private static int[] nextSmallElement(HashMap<Integer, Integer> map, int[] arr){
+    private static int[] nextSmallElement(int[] arr){
 
         int[] nseInd=new int[arr.length];
         Stack<Integer> st = new Stack<>();
         for(int i=arr.length-1;i>=0;i--){
-            while (!st.isEmpty() && st.peek()>=arr[i])
+            while (!st.isEmpty() && arr[st.peek()]>=arr[i])
                 st.pop();
             if(st.isEmpty())
                 nseInd[i]=arr.length;
             else
-                nseInd[i]=map.get(st.peek());
+                nseInd[i]=st.peek();
 
-            st.push(arr[i]);
+            st.push(i);
         }
         return nseInd;
     }
